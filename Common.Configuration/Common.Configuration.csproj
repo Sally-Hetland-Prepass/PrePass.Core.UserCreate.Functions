@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CreateUser\**" />
+    <Compile Remove="HttpClient\**" />
+    <EmbeddedResource Remove="CreateUser\**" />
+    <EmbeddedResource Remove="HttpClient\**" />
+    <None Remove="CreateUser\**" />
+    <None Remove="HttpClient\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core.Services.Common.Account" Version="1.0.0.8" />
+    <PackageReference Include="NServiceBus.Extensions.Hosting" Version="3.0.0" />
+    <PackageReference Include="NServiceBus.Newtonsoft.Json" Version="4.0.0" />
+    <PackageReference Include="NServiceBus.Transport.AzureServiceBus" Version="4.2.3" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
